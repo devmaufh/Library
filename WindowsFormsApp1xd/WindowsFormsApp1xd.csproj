@@ -32,8 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +69,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,6 +83,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_96px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_96px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Delete_96px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Books_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Books_512px_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_520px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_520px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Add_User_Male_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Category_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Book_Shelf_500px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

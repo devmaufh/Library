@@ -19,7 +19,22 @@ namespace WindowsFormsApp1xd
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            asd
+            //Coment
+            //MArio
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistroLibros_MouseHover(object sender, EventArgs e)
+        {
         }
     }
 }
