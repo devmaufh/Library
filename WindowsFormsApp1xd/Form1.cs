@@ -12,6 +12,8 @@ namespace WindowsFormsApp1xd
 {
     public partial class Form1 : Form
     {
+        Consultas consulta;
+        
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +21,8 @@ namespace WindowsFormsApp1xd
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Coment
-            //MArio
+            consulta.conecta();
+            
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
