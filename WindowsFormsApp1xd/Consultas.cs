@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
+
 namespace WindowsFormsApp1xd
 {
     class Consultas
@@ -13,6 +15,7 @@ namespace WindowsFormsApp1xd
         SqlConnection conn;
         SqlCommand cmd;
         SqlDataReader dataReader;
+        DataTable dt;
         public void conecta()
         {
             try
@@ -41,16 +44,50 @@ namespace WindowsFormsApp1xd
                 MessageBox.Show("Error al cerrar la conexión");
             }
         }
-        public void inserta_autores(String name, String apellidos)
+        public void inserta_autores(String name, String apellidos, String ruta)
         {
-                String consulta = "exec insert_autor'" + name + "', '" + apellidos + "';";
+            
+            try
+            {
+                conecta();
+                String consulta = "exec insert_autor'" + name + "', '" + apellidos + "','"+ruta+"';";
                 cmd = new SqlCommand(consulta, conn);
                 int status = cmd.ExecuteNonQuery();
                 if (status > 0)
                     MessageBox.Show("Autor registrado correctamente");
                 else
-                    MessageBox.Show("Error al registrar Autor"); 
+                    MessageBox.Show("Error al registrar Autor");
+                cierra_conexion();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error con el servidor");
+            }
         }
-        
+        public void carga_combo_estantes(ComboBox cb)
+        {
+            
+            try
+            {
+                conecta();
+                String sql = "Select * from estante;";
+                dt = new DataTable();
+                cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                cb.DisplayMember = "ubicacion";
+                cb.ValueMember = "id_estante";
+                cb.DataSource = dt;
+                cierra_conexion();
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error con el servidor");
+            }
+        }
+
     }
 }

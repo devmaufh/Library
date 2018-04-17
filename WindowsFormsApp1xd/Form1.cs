@@ -12,7 +12,7 @@ namespace WindowsFormsApp1xd
 {
     public partial class Form1 : Form
     {
-        Consultas consulta;
+        Consultas consulta = new Consultas();
         
         public Form1()
         {
@@ -21,7 +21,7 @@ namespace WindowsFormsApp1xd
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            consulta.conecta();
+            //consulta.conecta();
             
         }
 
